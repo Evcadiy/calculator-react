@@ -8,9 +8,10 @@ function App() {
 
   const handleClick = (e) => {
     if (result === "Error") {
-      setResult("");
+      setResult(e.target.name);
+    } else {
+      setResult(result.concat(e.target.name));
     }
-    setResult(result.concat(e.target.name));
   };
 
   const clear = () => {
